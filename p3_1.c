@@ -3,7 +3,7 @@
 int main()
 {
 	float num1,num2;
-	printf("ENter two numbers: ");
+	printf("Enter two numbers: ");
 	scanf("%f%f",&num1,&num2);
 	if(fabs(num1)>fabs(num2))
 	{
