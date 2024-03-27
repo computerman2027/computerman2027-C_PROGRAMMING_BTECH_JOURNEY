@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int a=1,b=0,c,n;
+    int a=-1,b=1,c,n,i;
     printf("ENTER NUMBER OF TERMS : ");
     scanf("%d",&n);
     if(n<1)
@@ -10,7 +10,8 @@ int main()
     }
     else
     {
-        for(int i=1;i<=n;i++)
+    	printf("FIBONACCI SERIES : ");
+        for(i=1;i<=n;i++)
         {
             c=a+b;
             if(i==n)
