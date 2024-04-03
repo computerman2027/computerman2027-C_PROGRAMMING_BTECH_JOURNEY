@@ -1,16 +1,17 @@
 #include <stdio.h>
 int main()
 {
+	int arr[100];
     int n, i, n2, value;
     printf("ENTER SIZE OF ARRAY : ");
     scanf("%d", &n);
-    if (n < 1)
+    if (n < 1 || n>100)
     {
         printf("INVALID SIZE");
     }
     else
     {
-        int arr[n];
+        
         for (i = 0; i < n; i++)
         {
             printf("enter a number : ");
