@@ -14,7 +14,7 @@ int main()
                 c1+=j;
             }
         }
-        if(c1<n1)
+        if(c1<=n1)
         continue;//to elminate dublicate printing
         n2=c1;    
         for(j=1;j<n2;j++)
