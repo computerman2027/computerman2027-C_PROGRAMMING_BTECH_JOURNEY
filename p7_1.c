@@ -3,6 +3,7 @@
 int main()
 {
     int row1,col1,row2,col2,i,j;
+    int mat1[100][100], mat2[100][100],mat3[100][100];
     printf("enter no of rows of 1st matrix: ");
     scanf("%d",&row1);
     printf("enter no of columns of 1st matrix : ");
@@ -11,13 +12,12 @@ int main()
     scanf("%d",&row2);
     printf("enter no of columns of 2nd matrix : ");
     scanf("%d",&col2);
-    if(row1<1 || col1<1 || row2<1 || col2<1)
+    if(row1<1 || col1<1 || row2<1 || col2<1 || row1>100 || col1>100 || row2>100 || col2>100 )
     {
         printf("INVALID INPUT");
     }
     else if(row1==row2 && col1==col2)
     {
-        int mat1[row1][col1], mat2[row2][col2],mat3[row2][col2];
         printf("Enter values for 1st matrix : \n");
         for(i=0;i<row1;i++)
         {
