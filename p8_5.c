@@ -5,6 +5,11 @@ int main()
     int year;
     printf("enter a year : ");
     scanf("%d",&year);
+    if(year<1)
+    {
+        printf("INVALID INPUT");
+        return 0;
+    }
     if(isLeapYear(year))
     {
         printf("%d is a leap year",year);
@@ -18,8 +23,6 @@ int main()
 
 int isLeapYear(int year)
 {
-    if(year<1)
-    return 0;
     if(year%400==0 ||(year%100!=0 && year%4==0))
     {
         return 1;

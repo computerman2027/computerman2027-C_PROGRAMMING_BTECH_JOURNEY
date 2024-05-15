@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void draw_hline(int length, char ch);
+void draw_hline(int length);
 
 int main() {
     int len;
@@ -8,18 +8,14 @@ int main() {
 
     printf("Enter the length of the horizontal line: ");
     scanf("%d", &len);
-
-    printf("Enter the character to use for the line: ");
-    scanf(" %c", &ch);
-
-    draw_hline(len, ch);
+    draw_hline(len);
 
     return 0;
 }
-void draw_hline(int length, char ch) {
+void draw_hline(int length) {
     int i;
     for (i = 0; i < length; i++) {
-        printf("%c", ch);
+        printf("-");
     }
     printf("\n");
 }
