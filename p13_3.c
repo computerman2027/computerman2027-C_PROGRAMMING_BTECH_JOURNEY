@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 void insertionsort(int *arr,int n)
 {
     int i,j,temp;
@@ -14,9 +15,15 @@ void insertionsort(int *arr,int n)
 }
 int main()
 {
-    int arr[100],n,i;
+    int *arr,n,i;
     printf("Enter number of element : ");
     scanf("%d",&n);
+    arr=(int*)malloc(n*sizeof(int));
+    if(arr==NULL)
+    {
+        printf("Memory allocation failed. Exiting...\n");
+        return -1;
+    }
     printf("Enter numbers \n");
     for(i=0;i<n;i++)
     {
@@ -28,5 +35,6 @@ int main()
     {
         printf("%d ",arr[i]);
     }
+    free(arr);
     return 0;
 }

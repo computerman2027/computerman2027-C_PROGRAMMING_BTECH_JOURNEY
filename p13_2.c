@@ -7,11 +7,11 @@ void bubblesort(int *ptr,int n)
     {
         for(j=0;j<n-i-1;j++)
         {
-            if(ptr[j]>ptr[j+1])
+            if(*(ptr+j)>*(ptr+j+1))
             {
-                temp=ptr[j];
-                ptr[j]=ptr[j+1];
-                ptr[j+1]=temp;
+                temp=*(ptr+j);
+                *(ptr+j)=*(ptr+j+1);
+                *(ptr+j+1)=temp;
             }
         }
     }
@@ -28,6 +28,11 @@ int main()
     }
     int *arr;
     arr=(int *)malloc(n*sizeof(int));
+    if(arr==NULL)
+    {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
     printf("enter %d numbers : ",n);
     for(i=0;i<n;i++)
     {
@@ -39,5 +44,6 @@ int main()
     {
         printf("%d ",arr[i]);
     }
+    free(arr);
     return 0;
 }
